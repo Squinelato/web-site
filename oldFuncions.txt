@@ -1,0 +1,62 @@
+// methodOverride = require('method-override');
+
+// async function insertUser(data){
+//     let conn = await client.connect(url,{useNewUrlParser: true, useUnifiedTopology: true});
+//     let db = conn.db('RedHatClone');
+//     return await db.collection('users').insertOne(data)
+// }
+
+// async function insertContent(content){
+//     let conn = await client.connect(url,{useNewUrlParser: true, useUnifiedTopology: true});
+//     let db = conn.db('RedHatClone');
+//     return await db.collection('content').insertOne(content)
+// }
+
+/*
+async function removeUser(name){
+    let conn = await client.connect(url,{useNewUrlParser: true});
+    let db = conn.db('RedHatClone');
+    return await db.collection('users').remove({name: name})
+}
+async function updateUser(name, newName){
+    let conn = await client.connect(url,{useNewUrlParser: true});
+    let db = conn.db('RedHatClone');
+    return await db.collection('users').update({name: name}, {name: newName});
+}
+*/
+
+// let con = [{
+//     img: "virtual-event-600x337.jpg",
+//     title: "Join our hybrid cloud virtual event",
+//     body: "Discover how open architecture, processes, and culture can complete your cloud strategy.",
+//     btn: "Watch on-demand"
+// },
+// {
+//     img: "Card-Image-CLH-600x337-ICON.png",
+//     title: "Command Line Heroes Season 3",
+//     body: "This season explores the epic stories of programming languages that shape technology.",
+//     btn: "Listen to the podcast"
+// },
+// {
+//     img: "fedora-table-600x337.jpg",
+//     title: "Open culture",
+//     body: "Our open processes and culture help create open technologies to support enterprise IT.",
+//     btn: "See how we work"
+// },
+// {
+//     img: "fedora-table-600x337.jpg",
+//     title: "Open culture",
+//     body: "Our open processes and culture help create open technologies to support enterprise IT.",
+//     btn: "See how we work"
+// }];
+
+// async function foo() {
+//     // await insertContent(con[2]);
+//     let result = await getUser("joao@gmail.com");
+//     let result2 = await getContent("");
+//     if(result[0].password == "5hg8g4f6fdgh"){
+//         console.log(result);
+//     }
+//     console.log(result2);
+// }
+// foo();

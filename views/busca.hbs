@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Buscar</title>
+    </head>
+    <body>
+        <div>
+            <form action="./resultado" method="GET" accept-charset="utf-8">
+                <input id='text' type="text" name="info" value="" />
+                <input type="submit" name="enviar" value="buscar" />
+            </form>
+            <a href="/">Voltar</a>
+        </div>
+        <div id='search'></div>
+    <script type="text/javascript" charset="utf-8">
+        setInterval(() => {
+            var sugestions = document.getElementById('search');
+            var value = document.getElementById('text').value;
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.open("GET", "search?value=" + value, true);
+            xmlhttp.onreadystatechange = function () {
+                if (xmlhttp.readyState === 4 && xmlhttp.status === 200){
+                    var cont = JSON.parse(xmlhttp.responseText);
+                    sugestions.innerHTML = '';
+                    for (let index = 0; index < cont.length; index++) {
+                        var newLine = '<p>' + cont[index].title + '</p>';
+                        sugestions.innerHTML += newLine;
+                    }
+                }
+            }
+            xmlhttp.send();
+        }, 2000);
+    </script>
+    </body>
+</html>

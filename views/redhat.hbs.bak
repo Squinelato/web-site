@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel = "stylesheet"
+          type = "text/css"
+          href = "style.css" />
+    <title>https://www.redhat.com/pt-br</title>
+</head>
+<body>
+    <div class="main">
+        <div class="upper-menu">
+            <ul class="upper-left">
+                <li><a href="#apps">Websites e apps</a></li>
+            </ul>
+            <ul class="upper-right">
+                <li><a href="#idioma">Postuguês</a></li>
+                <li><a href="#login">Login</a></li>
+                <li><a href="#pesquisa">Pesquisa</a></li>
+            </ul>
+        </div>
+        <div class="main-menu">
+            <div class="logo-div">
+                <img src="logo-red-hat.svg" title="Red Hat">
+            </div>
+            <div class="navigation-bar">
+                <ul>
+                    <li><a href="#produtos">Produtos</a></li>
+                    <li><a href="#soluções">Soluções</a></li>
+                    <li><a href="#serviços-e-suporte">Serviços e Suporte</a></li>
+                    <li><a href="#recursos">Recursos</a></li>
+                    <li><a href="red-hat-e-o-open-source">Red Hat e o open source</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="content">
+            <div class="background-image">
+                <img src="background.png" alt="imagem de fundo">
+            </div>
+            <div class="text">
+                <h1 class="main-title centered-align"><span>Conecte tudo</span><span>com a cloud híbrida</span></h1>
+                <p class="centered-align">A flexibilidade que você precisa para executar as cargas de trabalho no ambiente da sua escolha</p>
+                <div class="centered-align">
+                    <a href="#descubra">Descubra como</a>
+                </div>
+            </div>
+        </div>
+        <div class="extra"></div>
+    </div>
+    <div class="container">
+            <div class="card">
+                <img src="virtual-event-600x337.jpg" class="card-image">
+                <div class="cardBody">
+                        <h1 class="cardTitle">Join our hybrid cloud virtual event</h1>
+                    <span>Discover how open architecture, processes, and culture can complete your cloud strategy.</span>
+                </div>
+                <div class="cardFooter">
+                    <a class="cardButton" href=""><span style="margin: 10px">Watch on-demand</span></a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="Card-Image-CLH-600x337-ICON.png" class="card-image">
+                <div class="cardBody">
+                    <h1 class="cardTitle">Command Line Heroes Season 3</h1>
+                    <span>This season explores the epic stories of programming languages that shape technology.</span>
+                </div>
+                <div class="cardFooter">
+                    <a class="cardButton" href="">Listen to the podcast</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="fedora-table-600x337.jpg" class="card-image">
+                <div class="cardBody">
+                    <h1 class="cardTitle">Open culture</h1>
+                    <span>Our open processes and culture help create open technologies to support enterprise IT.</span>
+                </div>
+                <div class="cardFooter">
+                    <a class="cardButton" href="">See how we work</a>
+                </div>
+            </div>
+    </div>
+</body>
+</html>

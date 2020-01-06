@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://kit.fontawesome.com/e1669db21b.js"></script>
+    <link rel="shortcut icon" href="faviconRedHat.ico"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Red Hat - We make open source technologies for the enterprise</title>
+    <link rel = "stylesheet"
+          type = "text/css"
+          href = "style.css" />
+    <title>https://www.redhat.com/pt-br</title>
+</head>
+<body>
+        <div class="main">
+        <div class="upper-menu">
+            <ul class="upper-left">
+                <li><a href="#apps" class="icon-text"><span class="fas fa-th"></span>&nbsp; &nbsp;Websites & apps</a></li>
+            </ul>
+            <ul class="upper-right">
+                <li><a href="#idioma" class="icon-text"><span class="fas fa-globe-americas"></span>&nbsp; &nbsp;English</a></li>
+                {{#if adm}}
+                    <li><a href="/AddCont" class="icon-text"><span class="fas fa-user"></span>&nbsp; &nbsp;Add content</a></li>
+                {{else}}
+                    <li><a href="/login" class="icon-text"><span class="fas fa-user"></span>&nbsp; &nbsp;Log in</a></li>
+                {{/if}}
+                <li><a href="/buscar" class="icon-text"><span class="fas fa-search"></span>&nbsp; &nbsp;Search</a></li>
+            </ul>
+        </div>
+        <div class="main-menu">
+            <div class="logo-div"></div>
+            <div class="navigation-bar">
+                <ul>
+                    <li><a href="#produtos" class="desktop">Products</a></li>
+                    <li><a href="#soluções" class="desktop">Solutions</a></li>
+                    <li><a href="#serviços-e-suporte" class="desktop">Services & support</a></li>
+                    <li><a href="#recursos" class="desktop">Resources</a></li>
+                    <li><a href="red-hat-e-o-open-source" class="desktop">Red Hat & open source</a></li>
+                    <li><a href="#options" class="mobile"><span class="fas fa-bars"></span></a></li>
+                    <li><a href="#pesquisa" class="mobile"><span class="fas fa-search"></span>&nbsp;&nbsp;Search</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="content">
+            <div class="text">
+                <h1 class="main-title centered-align"><span>Bridge everything</span><span>with hybrid cloud</span></h1>
+                <p class="centered-align">Start running what you want, where you want</p>
+                <div class="centered-align">
+                    <a href="current.html" class="main-link">Learn how <span class="fas fa-arrow-right"></span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="con" class="container">
+        {{#each content}}
+            <div class="card">
+                <img src= {{img}} class="card-image">
+                <div class="cardBody">
+                        <h1 class="cardTitle">{{title}}</h1>
+                    <span>{{body}}</span>
+                </div>
+                <div class="cardFooter">
+                    <a class="cardButton" href=""><span style="margin: 10px">{{btn}}</span></a>
+                    <p style="text-align: right;">Author: {{ User }}</p>
+                </div>
+            </div>
+        {{/each}}   
+    </div>
+</body>
+</html>

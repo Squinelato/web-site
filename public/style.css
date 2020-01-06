@@ -1,0 +1,335 @@
+.container {
+    padding-top: 40px;
+    position: relative;
+    text-align: center;
+    margin: 20px;
+    
+}
+
+.card {
+    text-align: center;
+    margin: 7px;
+    width: 30%;
+    min-width: 220px;
+    height: auto; /*550px*/
+    display: inline-block;
+    background-color: white;
+    border: 1px solid lightgray;
+    font-family: 'Red Hat Display', sans-serif;
+    text-align: left
+}
+
+.card-image {
+    width: 100%;
+    max-width: inherit;
+    height: auto;
+}
+
+.cardTitle {
+    font-size: 28px;
+    text-align: left;
+    font-weight: 400;
+    line-height: 1;      
+    color:black;     
+    letter-spacing: 0px;
+    text-decoration: none;
+}
+
+.cardTitle:hover{
+    color: #004080;
+    text-decoration: underline;
+}
+
+.cardBody {
+    height: auto; /*250px*/
+    max-height: 350px;
+    min-height: 230px;
+    margin: 20px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.44;
+    color: #151515;
+} 
+
+.cardButton {
+    position: relative;
+    color: black;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 17;
+    border: 1px solid black;
+    border-radius: 3px;
+    padding-left: 28px;
+    padding-right: 28px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    margin: 20px;
+}
+
+.cardButton:hover{
+    color: white;
+    background-color: black;
+}
+
+.cardFooter{
+    height: 50px;
+}
+
+body {
+    margin: 0px;
+    background-color: #f0f0f0;
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+.main {
+    background-color: white;
+    height: 40em;
+    width: 100%;
+}
+
+div.main div {
+    float: left;
+}
+
+.upper-menu {
+    height: 43px;
+    width: 96%;
+    padding-left: 1%;
+    padding-right: 3%;
+    background-color: white;
+}
+
+.upper-left li a {
+    float: left;
+    display: block;
+    color: #555555;
+    font-weight: 100;
+    font-size: 0.85rem;
+    text-align: center;
+    text-decoration: none;
+}
+
+.upper-right li a {
+    float: right;
+    display: block;
+    color: #555555;
+    font-size: 0.85rem;
+    text-align: center;
+    padding: 0px 25px;
+    text-decoration: none;
+}
+
+.main-menu {
+    height: 78px;
+    width: 96.5%;
+    padding-left: 3.5%;
+    background-color: #151515;
+}
+
+.logo-div {
+    height: 100%;
+    width: 10%;
+    float: left;
+    background-image: url(logo-red-hat.svg);
+    background-size: 100% 100%;
+}
+
+.navigation-bar {
+    height: 100%;
+    width: 90%;
+    float: left;
+}
+
+.navigation-bar ul {
+    list-style-type: none;
+    padding-left: 3%;
+}
+
+.upper-menu ul {
+    list-style-type: none;
+}
+
+a.main-link {
+    display: block;
+    color: #004080;
+    font-weight: bold;
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+    text-align: center;
+    text-decoration: none;
+}
+
+a.desktop {
+    float: left;
+    display: block;
+    color: white;
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+    text-align: center;
+    padding: 5px 40px;
+    text-decoration: none;
+}
+
+a.desktop::before {
+    content: "";
+    top: 30px;
+    height: 3.5px;
+    width: 32.5px;
+    display: block;
+    position: relative;
+    background-color: #DDDDDD;
+}
+
+a.desktop:hover::before {
+    background-color: red;
+}
+
+.content {
+    object-fit: fill;
+    position: relative;
+    height: 525px;
+    width: 100%;
+    top: 0%;
+    left: 0%;
+    background-image: url("bkgd-day15-homepage-hero_2000x625.png");
+    background-size: 146% 100%;
+    background-position-x: 46%;
+    overflow: hidden;
+}
+
+.text {
+    height: 50%;
+    width: 40%;
+    padding-top: 10%;
+    padding-left: 30%;
+}
+
+.icon-text {
+    color: #f0f0f0;
+    font-weight: 100;
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+.main-title {
+    font-weight: 100;
+    font-size: 2.5em;
+}
+
+.main-title > span {
+    display: block;
+}
+
+.centered-align {
+    margin-bottom: 40px;
+    width: 100%;
+    text-align: center;
+    letter-spacing: 1px;
+    color: #151515;
+}
+
+@media screen and (min-width: 1200px) {
+    
+    a.mobile {
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 780px){
+
+    .card {
+        text-align: center;
+        width: 92%;
+        height: auto;
+        display: inline-block;
+        background-color: white;
+        border: 1px solid lightgray;
+        text-align: left
+    }
+
+    .cardBody {
+        min-height: 190px;   
+    }
+
+    .container{
+        margin: 0px;
+        margin-top: 20px;
+    }
+
+    a.mobile {
+        float: right;
+        display: block;
+        color: #f0f0f0;
+        font-weight: 100;
+        font-family: 'Red Hat Display', sans-serif;
+        font-size: 1.2rem;
+        letter-spacing: 0.5px;
+        text-align: center;
+        padding: 0px 10px;
+        text-decoration: none;
+    }
+
+    .main {
+        background-color: white;
+        height: 34em;
+        width: 100%;
+    }
+
+    .main-title {
+        font-weight: 100;
+        font-size: 2em;
+    }
+
+    .text {
+        height: 50%;
+        width: 95%;
+        padding-top: 5%;
+        padding-left: 2.5%;
+    }
+
+    .navigation-bar {
+        height: 100%;
+        width: 68%;
+        float: left;
+    }
+
+    a.desktop {
+        display: none;
+    }
+
+    .upper-menu {
+        display: none;
+    }
+
+    .main-menu {
+        height: 56px;
+        width: 92%;
+        padding-left: 8%;
+        background-color: #151515;
+    }
+
+    .logo-div {
+        height: 100%;
+        width: 32%;
+        float: left;
+        background-image: url(logo-red-hat.svg);
+        background-size: 100% 100%;
+    }
+
+    .content {
+        position: relative;
+        height: 500px;
+        width: 100%;
+        top: 0%;
+        left: 0%;
+        background-image: url("bkgd-day15-homepage-hero_500x800.png");
+        background-size: 100% 100%;
+    }
+
+    .text {
+        height: 60%;
+        width: 80%;
+        padding-top: 20%;
+        padding-left: 10%; 
+    }
+}

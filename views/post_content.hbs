@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Postagem de Conteúdo</title>
+    </head>
+    <body>
+        {{#if forbiden}}
+            <section class="forbiden">
+                <h2>You shall not pass!</h2>
+                <a href="/">now, get the hell out of here</a>
+            </section>
+        {{else}}
+            <h1>Postagem de Conteúdo</h1>
+            {{#if success}}
+                <section class="sucess">
+                    <h2>Conteúdo postado com sucesso!</h2>
+                    <a href="/">voltar à página inicial</a>
+                </section>
+            {{else}}
+                {{#if errors}}
+                    <section class="errors">
+                        <ul>
+                            {{#each errors}}
+                                <li>{{ this.msg }}</li>
+                            {{/each}}
+                        </ul>
+                    </section>
+                {{/if}}
+                <form action="./AddCont" method="POST" enctype="multipart/form-data" accept-charset="utf-8">
+                    <div>
+                        <label for='contenttitle'>Título</label> 
+                    </div>
+                    <div>
+                        <input type="text" id="contenttitle" name="contenttitle" value=""></input>
+                    </div>
+                    <div>
+                        <label for='contenttext'>Texto:</label>  
+                    </div>
+                    <div>
+                        <textarea name="contenttext" id="contenttext" cols="30" rows="10"></textarea>
+                    </div>
+                    <div>
+                        <label for='contentbutom'>Texto do Botão</label> 
+                    </div>
+                    <div>
+                        <input type="text" id="contentbutom" name="contentbutom" value=""></input>
+                    </div>
+                    <div>
+                        <label for="arquivo">Insira a imagem a ser postada:</label>
+                        <input type="file" id="arquivo" name="arquivo" value="Clique para inseriar uma imagem"></input>
+                    </div>
+                    <div>
+                        <input type="submit" name="postar" value="postar"></input>
+                    </div>
+                </form>
+            {{/if}}
+        {{/if}}
+    </body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta http-equiv="content-type"
+              content="text/html; charset=utf-8" />
+        <link rel = "stylesheet"
+              type = "text/css"
+              href = "style.css" />
+        <title>Current News</title>
+    </head>
+    <body>
+        <div class="container" id="container"></div>
+        <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+        <script type="text/javascript" charset="utf-8">
+            var container = document.querySelector("#container");
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.open("GET", "refresh", true);
+            xmlhttp.onreadystatechange = function () {
+                if (xmlhttp.readyState === 4 && xmlhttp.status === 200){
+                    var temp = document.getElementById("tCon").innerHTML;
+                    var output = Handlebars.compile(temp);
+                    var cont = JSON.parse(xmlhttp.responseText);
+                    container.innerHTML = '';
+                    for (let index = 0; index < cont.length; index++) {
+                        container.innerHTML += output(cont[index]);                    
+                    }
+                }
+            };
+            xmlhttp.send();
+            setInterval(() => {
+                xmlhttp.open("GET", "refresh", true);
+                xmlhttp.onreadystatechange = function () {
+                    if (xmlhttp.readyState === 4 && xmlhttp.status === 200){
+                        var temp = document.getElementById("tCon").innerHTML;
+                        var output = Handlebars.compile(temp);
+                        var cont = JSON.parse(xmlhttp.responseText);
+                        container.innerHTML = '';
+                        for (let index = 0; index < cont.length; index++) {
+                            container.innerHTML += output(cont[index]);                    
+                        }
+                    }
+                
+                };
+                xmlhttp.send();
+                container.innerHTML = '<img style="width:256px; margin-top:240px; height:auto" src="load.gif" alt="carregando">'
+            }, 10000);
+        </script>
+        <script type="text/javascript" charset="utf-8">
+            var postxmlhttp = new XMLHttpRequest();
+            setInterval(() => {
+                var date = new Date();
+                var param = 'currentDate=' + date.toString();
+                console.log(typeof param);
+                postxmlhttp.open('POST', 'update', true);
+                postxmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+                postxmlhttp.onreadystatechange = function() {
+                    if(postxmlhttp.readyState === 4 && postxmlhttp.status === 200) {
+                        console.log(param);
+                    }
+                }
+                postxmlhttp.send(param);
+            }, 10000);
+        </script>
+    </body>
+    
+    <template id="tCon">
+            <div class="card">
+                <img src= {{img}} class="card-image">
+                <div class="cardBody">
+                        <h1 class="cardTitle">{{title}}</h1>
+                    <span>{{body}}</span>
+                </div>
+                <div class="cardFooter">
+                    <a class="cardButton" href=""><span style="margin: 10px">{{btn}}</span></a>
+                    <p style="text-align: right;">Author: {{ User }}</p>
+                </div>
+            </div>
+    </template>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro</title>
+</head>
+<body>
+    <h1>Cadastro</h1>
+    {{#if success}} 
+        <section class="sucess">
+            <h2>Cadastro realizado com sucesso!</h2>
+            <a href="/login">voltar à página de login</a>
+        </section>
+    {{else}}
+        {{#if errors}}
+            <section class="errors">
+                <ul>
+                    {{#each errors}}
+                        <li>{{ this.msg }}</li>
+                    {{/each}}
+                </ul>
+            </section>
+        {{/if}}
+        <form method="POST" action="./sign_up" accept-charset="utf-8">
+            <div>
+                <label for="username">Nome:</label>
+            </div>
+            <div>
+                <input type="text" id='username' name="username"></input>
+            </div>
+            <div>
+                <label for="userlastname">Sobrenome:</label>
+            </div>
+            <div>
+                <input type="text" id='userlastname' name="userlastname"></input>
+            </div>
+            <div>
+                <label for="userbirthday">Data de nascimento:</label>
+            </div>
+            <div>
+                <input type="text" id='userbirthday' name="userbirthday"></input>
+            </div>
+            <div>
+                <label for="useremail">Email:</label>
+            </div>
+            <div>
+                <input type="text" id='useremail' name="useremail"></input>
+            </div>
+            <div>
+                <label for="userstreet">Rua:</label>
+            </div>
+            <div>
+                <input type="text" id='userstreet' name="userstreet"></input>
+            </div>
+            <div>
+                <label for="userstreetnumber">Número:</label>
+            </div>
+            <div>
+                <input type="text" id='userstreetnumber' name="userstreetnumber"></input>
+            </div>
+            <div>
+                <label for="usercomplement">Complemento:</label>
+            </div>
+            <div>
+                <input type="text" id='usercomplement' name="usercomplement"></input>
+            </div>
+            <div>
+                <label for="userregion">Bairro:</label>
+            </div>
+            <div>
+                <input type="text" id='userregion' name="userregion"></input>
+            </div>
+            <div>
+                <label for="usercity">Cidade:</label>
+            </div>
+            <div>
+                <input type="text" id='usercity' name="usercity"></input>
+            </div>
+            <div>
+                <label for="userfederation">Estado:</label>
+            </div>
+            <div>
+                <input type="text" id='userfederation' name="userfederation"></input>
+            </div>
+            <div>
+                <label for="userpassword">Senha:</label>
+            </div>
+            <div>
+                <input type="password" id='userpassword' name="userpassword"></input>
+            </div>
+            <div>
+                <input type="submit" id='cadastrar' name='cadastrar' value="cadastrar"></input>
+            </div>
+        </form>
+    {{/if}}
+</body>
+</html>
